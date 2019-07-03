@@ -33,11 +33,11 @@ const router = require('./controllers/api.js');
 app.use(router);
 
 //MongoDB connection
-const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost/mongoHeadlines';
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/mongoHeadlines';
 
 //ES6 promises 
 mongoose.Promise = Promise;
-mongoose.connect(MONGO_URI);
+mongoose.connect(MONGODB_URI);
 
 //Listener
 app.listen(PORT, function() {
